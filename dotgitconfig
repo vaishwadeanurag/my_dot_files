@@ -1,0 +1,27 @@
+[credential]
+	helper = cache --timeout=3600
+[user]
+	email = *****
+	name = *****
+[apply]
+    whitespace = warn
+[color]
+    branch = auto
+    diff = auto
+    interactive = auto
+    ui = always
+    pager = true
+[color "status"]
+    untracked = black
+    changed = red
+    added = green
+[format]
+# pretty="%Cgreen%h %Cred%ar %C(yellow)%d %Creset%s %Cblue<%an> %Cred(%ad)"
+    pretty="%Cgreen%h %Cred%ar(%ad) %Cblue<%an> %C(yellow)%d %Creset%s"
+[core]
+    editor = subl
+    autocrlf = input
+    pager = less -FRSX
+    whitespace = warn
+    safecrlf = warn
+    filemode = false
