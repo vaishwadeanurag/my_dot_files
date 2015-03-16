@@ -11,15 +11,25 @@
     interactive = auto
     ui = always
     pager = true
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow
+    frag = magenta bold
+    old = red bold
+    new = green
 [color "status"]
-    untracked = black
+    untracked = blue
     changed = red
+    deleted = red bold
     added = green
 [format]
 # pretty="%Cgreen%h %Cred%ar %C(yellow)%d %Creset%s %Cblue<%an> %Cred(%ad)"
     pretty="%Cgreen%h %Cred%ar(%ad) %Cblue<%an> %C(yellow)%d %Creset%s"
 [core]
-    editor = subl
+    editor = emacs -nw
     autocrlf = input
     pager = less -FRSX
     whitespace = warn
