@@ -3,7 +3,7 @@
 ;; In every buffer, the line which contains the cursor will be fully
 ;; highlighted
 
-(global-hl-line-mode 1)
+;;(global-hl-line-mode 1)
 
  ;; ===== Set standard indent explicitly to 4 ====
 (setq standard-indent 4)
@@ -49,17 +49,17 @@
 (column-number-mode 1)
 
 
- ;; ========= Set colours ==========
+;; ========= Set colours ==========
 
 ;; Set cursor and mouse-pointer colours
-(set-cursor-color "red")
-(set-mouse-color "goldenrod")
+;;(set-cursor-color "red")
+;;(set-mouse-color "goldenrod")
 
 ;; Set region background colour
-(set-face-background 'region "blue")
+;;(set-face-background 'region "blue")
 
 ;; Set emacs background colour
-(set-background-color "black")
+;;(set-background-color "black")
 
 ;;========= setting ido mode=============
 (ido-mode)
@@ -75,5 +75,21 @@
 (global-linum-mode 1)
 (setq linum-format "%d ")
 
-;;========= setting for glodal copy=============
-(setq x-select-enable-clipboard t)
+
+;;========= setting for cua mode=============
+(cua-mode t)
+(setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
+(transient-mark-mode 1) ;; No region when it is not highlighted
+(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
+(cua-selection-mode t)
+
+(setq inhibit-startup-message   t)   ; Don't want any startup message
+
+(setq search-highlight           t) ; Highlight search object
+
+;;=======How to have Emacs auto-refresh all buffers when files have changed on disk====
+(global-auto-revert-mode t)
+
+
+;;========turning off electric-indent-mode for proper indentation=======
+(electric-indent-mode -1)
