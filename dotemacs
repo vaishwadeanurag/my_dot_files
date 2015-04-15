@@ -1,4 +1,4 @@
-;; ===== Set the highlight current line minor mode =====
+ ;; ===== Set the highlight current line minor mode =====
 
 ;; In every buffer, the line which contains the cursor will be fully
 ;; highlighted
@@ -78,18 +78,33 @@
 
 ;;========= setting for cua mode=============
 (cua-mode t)
-(setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
-(transient-mark-mode 1) ;; No region when it is not highlighted
-(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
-(cua-selection-mode t)
+;;(setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
+;;(transient-mark-mode 1) ;; No region when it is not highlighted
+;;(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
+;;(cua-selection-mode t)
 
 (setq inhibit-startup-message   t)   ; Don't want any startup message
 
-(setq search-highlight           t) ; Highlight search object
+(setq search-highlight t) ; Highlight search object
 
 ;;=======How to have Emacs auto-refresh all buffers when files have changed on disk====
 (global-auto-revert-mode t)
 
 
 ;;========turning off electric-indent-mode for proper indentation=======
-(electric-indent-mode -1)
+;;(electric-indent-mode -1)
+
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes (quote (wheatgrass)))
+ '(tool-bar-mode nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
