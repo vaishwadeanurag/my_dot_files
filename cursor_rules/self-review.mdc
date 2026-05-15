@@ -1,0 +1,22 @@
+---
+description: Self-review code before final response
+alwaysApply: true
+---
+
+# Self Review
+
+Before finalizing code, review it for:
+
+- Correctness
+- Edge cases
+- Performance issues
+- Race conditions
+- Security issues
+- Backward compatibility
+- Testability
+- Readability
+- Alignment with existing project patterns
+
+If there is a tradeoff or risk, explicitly mention it.
+
+Do not claim the code is production-ready unless tests, error handling, and observability have been considered.
